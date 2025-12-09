@@ -1,10 +1,11 @@
 export default class Selector {
-    constructor(filterBar, changeModeButton, changeModeImage, changeDirectionButton, changeDirectionImage, songTree, player, songJSON) {
+    constructor(filterBar, changeModeButton, changeModeImage, changeDirectionButton, changeDirectionImage, minimiseAllButton, songTree, player, songJSON) {
         this.filterBar = filterBar;
         this.changeModeButton = changeModeButton;
         this.changeModeImage = changeModeImage;
         this.changeDirectionButton = changeDirectionButton;
         this.changeDirectionImage = changeDirectionImage;
+        this.minimiseAllButton = minimiseAllButton;
         this.songTree = songTree;
         this.player = player;
         this.songJSON = songJSON;
@@ -41,6 +42,10 @@ export default class Selector {
                 this.sortDirection = 'ascending';
                 this.changeDirectionImage.src = 'arrow-up.svg';
             }
+            this.render();
+        });
+        this.minimiseAllButton.addEventListener('click', () => {
+            this.path = [];
             this.render();
         });
     }

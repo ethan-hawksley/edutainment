@@ -96,6 +96,9 @@ function loadApp(songJSON: SongFolder) {
   const changeDirectionImage = document.getElementById(
     'change-direction-image',
   )! as HTMLImageElement;
+  const minimiseAllButton = document.getElementById(
+    'minimise-all-button',
+  )! as HTMLButtonElement;
   const songTree = document.getElementById('song-tree')!;
 
   const selector = new Selector(
@@ -104,6 +107,7 @@ function loadApp(songJSON: SongFolder) {
     changeModeImage,
     changeDirectionButton,
     changeDirectionImage,
+    minimiseAllButton,
     songTree,
     player,
     songJSON,

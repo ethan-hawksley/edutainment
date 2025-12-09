@@ -43,8 +43,9 @@ function loadApp(songJSON) {
     const changeModeImage = document.getElementById('change-mode-image');
     const changeDirectionButton = document.getElementById('change-direction-button');
     const changeDirectionImage = document.getElementById('change-direction-image');
+    const minimiseAllButton = document.getElementById('minimise-all-button');
     const songTree = document.getElementById('song-tree');
-    const selector = new Selector(filterBar, changeModeButton, changeModeImage, changeDirectionButton, changeDirectionImage, songTree, player, songJSON);
+    const selector = new Selector(filterBar, changeModeButton, changeModeImage, changeDirectionButton, changeDirectionImage, minimiseAllButton, songTree, player, songJSON);
     selector.render();
     document.addEventListener('keydown', (e) => {
         if (e.target instanceof HTMLInputElement ||

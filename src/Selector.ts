@@ -14,6 +14,7 @@ export default class Selector {
     private changeModeImage: HTMLImageElement,
     private changeDirectionButton: HTMLButtonElement,
     private changeDirectionImage: HTMLImageElement,
+    private minimiseAllButton: HTMLButtonElement,
     private songTree: HTMLElement,
     private player: Player,
     private songJSON: SongFolder,
@@ -47,6 +48,11 @@ export default class Selector {
         this.sortDirection = 'ascending';
         this.changeDirectionImage.src = 'arrow-up.svg';
       }
+      this.render();
+    });
+
+    this.minimiseAllButton.addEventListener('click', () => {
+      this.path = [];
       this.render();
     });
   }
